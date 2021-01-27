@@ -1,4 +1,4 @@
-const { sortDescending, charCount, potatoes, singleOccurance, addUp, doubleChar, sortByLength, allTruthy, secondLargest, toArray, spelling, chatroomStatus, inkLevels, isSymmetrical, minutesToSeconds } = require('./index.js');
+const { reverseCase, sortDescending, charCount, potatoes, singleOccurance, addUp, doubleChar, sortByLength, allTruthy, secondLargest, toArray, spelling, chatroomStatus, inkLevels, isSymmetrical, minutesToSeconds } = require('./index.js');
 
 test('Adds up numbers up to the given one', () => {
   expect(addUp(1)).toBe(1);
@@ -8,28 +8,28 @@ test('Adds up numbers up to the given one', () => {
 });
 
 test('Find single character occurance from the string', () => {
-  expect(singleOccurance('EFFEAABbc')).toBeEqual('C');
-  expect(singleOccurance('AAAAVNNNNSS')).toBeEqual('V');
-  expect(singleOccurance('s')).toBeEqual('S');
-  expect(singleOccurance('aaaassssddffdsffgg')).toBeEqual('');
+  expect(singleOccurance('EFFEAABbc')).toBe('C');
+  expect(singleOccurance('AAAAVNNNNSS')).toBe('V');
+  expect(singleOccurance('s')).toBe('S');
+  expect(singleOccurance('aaaassssddffdsffgg')).toBe('');
 });
 
 test('Double each characters in the string', () => {
-  expect(doubleChar('String')).toBeEqual('SSttrriinngg');
-  expect(doubleChar('Hello World!')).toBeEqual('HHeelllloo  WWoorrlldd!!');
-  expect(doubleChar('1234!_ ')).toBeEqual('11223344!!__  ');
+  expect(doubleChar('String')).toBe('SSttrriinngg');
+  expect(doubleChar('Hello World!')).toBe('HHeelllloo  WWoorrlldd!!');
+  expect(doubleChar('1234!_ ')).toBe('11223344!!__  ');
 });
 
 test('Sort arrays by length', () => {
-  expect(sortByLength(["a", "ccc", "dddd", "bb"])).toBeEqual(["a", "bb", "ccc", "dddd"]);
-  expect(sortByLength(["apple", "pie", "shortcake"])).toBeEqual(["pie", "apple", "shortcake"]);
-  expect(sortByLength(["may", "april", "september", "august"])).toBeEqual(["may", "april", "september", "august"]);
+  expect(sortByLength(["a", "ccc", "dddd", "bb"])).toEqual(["a", "bb", "ccc", "dddd"]);
+  expect(sortByLength(["apple", "pie", "shortcake"])).toEqual(["pie", "apple", "shortcake"]);
+  expect(sortByLength(["may", "april", "september", "august"])).toEqual(["may", "april", "august", "september"]);
 });
 
 test('Are all values truthy', () => {
-  expect(allTruthy(true, true, true)).toBeEqual(true);
-  expect(allTruthy(true, false, true)).toBeEqual(false);
-  expect(allTruthy(5, 4, 3, 2, 1, 0)).toBeEqual(false);
+  expect(allTruthy(true, true, true)).toBe(true);
+  expect(allTruthy(true, false, true)).toBe(false);
+  expect(allTruthy(5, 4, 3, 2, 1, 0)).toBe(false);
 });
 
 test('Find second largest number', () => {
@@ -39,28 +39,28 @@ test('Find second largest number', () => {
 });
 
 test('Convert object to 2D array', () => {
-  expect(toArray({ a: 1, b: 2 })).toBeEqual([["a", 1], ["b", 2]]);
-  expect(toArray({ foo: 33, bar: 45, baz: 67 })).toBeEqual([["foo", 33], ["bar", 45], ["baz", 67]]);
-  expect(toArray({ shrimp: 15, tots: 12 })).toBeEqual([["shrimp", 15], ["tots", 12]]);
-  expect(toArray({})).toBeEqual([]);
+  expect(toArray({ a: 1, b: 2 })).toEqual([["a", 1], ["b", 2]]);
+  expect(toArray({ foo: 33, bar: 45, baz: 67 })).toEqual([["foo", 33], ["bar", 45], ["baz", 67]]);
+  expect(toArray({ shrimp: 15, tots: 12 })).toEqual([["shrimp", 15], ["tots", 12]]);
+  expect(toArray({})).toEqual([]);
 });
 
 test('Spell the word', () => {
-  expect(spelling("bee")).toBeEqual(['b', 'be', 'bee']);
-  expect(spelling("cake")).toBeEqual(['c', 'ca', 'cak', 'cake']);
-  expect(spelling("happy")).toBeEqual(['h', 'ha', 'hap', 'happ', 'happy']);
-  expect(spelling("eagerly")).toBeEqual(['e', 'ea', 'eag', 'eage', 'eager', 'eagerl', 'eagerly']);
-  expect(spelling("believe")).toBeEqual(['b', 'be', 'bel', 'beli', 'belie', 'believ', 'believe']);
+  expect(spelling("bee")).toEqual(['b', 'be', 'bee']);
+  expect(spelling("cake")).toEqual(['c', 'ca', 'cak', 'cake']);
+  expect(spelling("happy")).toEqual(['h', 'ha', 'hap', 'happ', 'happy']);
+  expect(spelling("eagerly")).toEqual(['e', 'ea', 'eag', 'eage', 'eager', 'eagerl', 'eagerly']);
+  expect(spelling("believe")).toEqual(['b', 'be', 'bel', 'beli', 'belie', 'believ', 'believe']);
 });
 
 test('Return chatroom status', () => {
-  expect(chatroomStatus([])).toBeEqual("no one online");
-  expect(chatroomStatus(["becky325"])).toBeEqual("becky325 online");
-  expect(chatroomStatus(["becky325", "malcolm888"])).toBeEqual("becky325 and malcolm888 online");
-  expect(chatroomStatus(["becky325", "malcolm888", "fah32fa"])).toBeEqual("becky325, malcolm888 and 1 more online");
-  expect(chatroomStatus(["paRIE_to"])).toBeEqual("paRIE_to online");
-  expect(chatroomStatus(["s234f", "mailbox2"])).toBeEqual("s234f and mailbox2 online");
-  expect(chatroomStatus(["pap_ier44", "townieBOY", "panda321", "motor_bike5", "sandwichmaker833", "violinist91"])).toBeEqual("pap_ier44, townieBOY and 4 more online");
+  expect(chatroomStatus([])).toBe("no one online");
+  expect(chatroomStatus(["becky325"])).toBe("becky325 online");
+  expect(chatroomStatus(["becky325", "malcolm888"])).toBe("becky325 and malcolm888 online");
+  expect(chatroomStatus(["becky325", "malcolm888", "fah32fa"])).toBe("becky325, malcolm888 and 1 more online");
+  expect(chatroomStatus(["paRIE_to"])).toBe("paRIE_to online");
+  expect(chatroomStatus(["s234f", "mailbox2"])).toBe("s234f and mailbox2 online");
+  expect(chatroomStatus(["pap_ier44", "townieBOY", "panda321", "motor_bike5", "sandwichmaker833", "violinist91"])).toBe("pap_ier44, townieBOY and 4 more online");
 });
 
 test('Print levels', () => {
@@ -112,10 +112,10 @@ test('Video length in seconds', () => {
 });
 
 test('Reverse the case', () => {
-  expect(reverseCase("Happy Birthday")).toBeEqual('hAPPY bIRTHDAY');
-  expect(reverseCase('MANY THANKS')).toBeEqual('many thanks');
-  expect(reverseCase('sPoNtAnEoUs')).toBeEqual('SpOnTaNeOuS');
-  expect(reverseCase('eXCELLENT, yOuR mAJESTY')).toBeEqual('Excellent, YoUr Majesty');
+  expect(reverseCase("Happy Birthday")).toBe('hAPPY bIRTHDAY');
+  expect(reverseCase('MANY THANKS')).toBe('many thanks');
+  expect(reverseCase('sPoNtAnEoUs')).toBe('SpOnTaNeOuS');
+  expect(reverseCase('eXCELLENT, yOuR mAJESTY')).toBe('Excellent, YoUr Majesty');
 });
 
 test('Is the Number Symmetrical', () => {
@@ -153,7 +153,7 @@ test('Sort Numbers in Descending Order', () => {
   expect(sortDescending(670276097)).toBe(977766200);
   expect(sortDescending(2619805)).toBe(9865210);
   expect(sortDescending(81294)).toBe(98421);
-  expect(sortDescending(0000000)).toBe(0000000);
+  expect(sortDescending(1111)).toBe(1111);
   expect(sortDescending(321)).toBe(321);
   expect(sortDescending(628904)).toBe(986420);
   expect(sortDescending(289327560)).toBe(987653220);

@@ -7,22 +7,22 @@ function addUp(number) {
   Return the letter in uppercase. 
   If the input is empty, return an empty string "".
 */
-function singleOccurance(string) {
- 
+function singleOccurance(str) {
+  
 }
 
 /* 
   Create a function that takes a string and returns a string in which each character is repeated once.
 */
-function doubleChar(string) {
- 
+function doubleChar(str) {
+
 }
 
 /* 
   Create a function that returns an array of strings sorted by length in ascending order.
 */
-function sortByLength(array) {
- 
+function sortByLength(arr) {
+
 }
 
 /* 
@@ -30,31 +30,31 @@ function sortByLength(array) {
   Falsy values include false, 0, "" (empty string), null, undefined, and NaN; everything else is truthy.
   You will always be supplied with at least one parameter.
 */
-function allTruthy(...array) {
- 
+function allTruthy(...arr) {
+
 }
 
 /* 
   Create a function that takes an array of numbers and returns the second largest number.
   There will be at least two numbers in the array.
 */
-function secondLargest(array) {
- 
+function secondLargest(arr) {
+
 }
 
 /* 
   Write a function that converts an object into an array, where each element represents a key-value pair in the form of an array.
   Return an empty array if the object is empty.
 */
-function toArray(object) {
- 
+function toArray(obj) {
+
 }
 
 /* 
   Create a function which takes in a word and spells it out, by consecutively adding letters until the full word is completed.
 */
-function spelling(string) {
- 
+function spelling(str) {
+
 }
 
 /* 
@@ -68,16 +68,16 @@ function spelling(string) {
 
   "user1, user2 and 3 more online"
 */
-function chatroomStatus(array) {
- 
+function chatroomStatus(arr) {
+
 }
 
 /* 
   Given an object of how many more pages each ink color can print, output the maximum number of pages the printer can print before any of the colors run out.
   A single printed page requires each color once, so printing is not possible if any of the slots lack ink
 */
-function inkLevels(object) {
- 
+function inkLevels(obj) {
+
 }
 
 /* 
@@ -87,31 +87,38 @@ function inkLevels(object) {
   If the number of seconds is 60 or over, return false (see example #3).
   You may get a number of minutes over 99 (e.g. "121:49" is perfectly valid).
 */
-function minutesToSeconds(string) {
- 
+function minutesToSeconds(str) {
+
+}
+
+/* 
+  Given a string, create a function to reverse the case. All lower-cased letters should be upper-cased, and vice versa.
+*/
+function reverseCase(str) {
+
 }
 
 /* 
   Create a function that takes a number as an argument and returns true or false depending on whether the number is symmetrical or not. 
   A number is symmetrical when it is the same as its reverse.
 */
-function isSymmetrical(number) {
- 
+function isSymmetrical(num) {
+
 }
 
 /* 
   Create a function to return the amount of potatoes there are in a string.
 */
-function potatoes(string) {
- 
+function potatoes(str) {
+
 }
 
 /* 
   Create a function that takes two strings as arguments and returns the number of times the first string (the single character) is found in the second string.
   Your output must be case-sensitive (see second test).
 */
-function charCount(char, string) {
- 
+function charCount(char, str) {
+
 }
 
 /* 
@@ -119,8 +126,8 @@ function charCount(char, string) {
   Descending order is when you sort from highest to lowest.
   You can expect non-negative numbers for all test cases.
 */
-function sortDescending(number) {
- 
+function sortDescending(num) {
+
 }
 
-module.exports = { sortDescending, charCount, potatoes, singleOccurance, addUp, doubleChar, sortByLength, allTruthy, secondLargest, toArray, spelling, chatroomStatus, inkLevels, isSymmetrical, minutesToSeconds };
+module.exports = { reverseCase, sortDescending, charCount, potatoes, singleOccurance, addUp, doubleChar, sortByLength, allTruthy, secondLargest, toArray, spelling, chatroomStatus, inkLevels, isSymmetrical, minutesToSeconds };
